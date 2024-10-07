@@ -50,19 +50,19 @@ variable "ssh_location" {
 
 # rds variables
 variable "database_snapshot_identifier" {
-  default       = "arn:aws:rds:us-east-1:905418252000:snapshot:a4lwordpress-with-cat-post-mysql-8032" 
+  default       = "arn:aws:rds:us-east-1:905418252000:snapshot:rentzone-ecs-final-snapshot" 
   description   = "database snapshot arn"
   type          = string
 }
 
 variable "database_instance_class" {
-  default       = "db.t2.micro" 
+  default       = "db.t3.micro" 
   description   = "the database instance type"
   type          = string
 }
 
 variable "database_instance_identifier" {
-  default       = "rdsmultiazsnap-db-0jlun6obkdwi" 
+  default       = "dev-rds-db" 
   description   = "the database instance identifier"
   type          = string
 }
@@ -72,3 +72,11 @@ variable "multi_az_deployment" {
   description   = "create a standby db instance"
   type          = bool
 }
+
+# # alb variables
+
+# variable "ssl_certificate_arn" {
+#   default       = 
+#   description   = "create a standby db instance"
+#   type          = bool
+# } 
